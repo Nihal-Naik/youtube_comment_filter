@@ -1,43 +1,73 @@
+*{
+  font-size: medium;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #1e1e1e;
+    background: #232323;
     color: white;
+    width: 350px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 300px;
-    padding: 20px;
   }
   
   .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 95%;
+    position: relative;
   }
   
   input {
-    width: 90%;
-    padding: 8px;
-    margin: 10px 0;
+    width: 92%;
+    padding: 9px;
+    /* margin: 30px 0; */
+    color: white;
     border-radius: 5px;
-    border: none;
+    border: 1px solid gray;
+    box-sizing: content-box;
+    background-color: transparent;
+    
+  }
+  input:focus{
+    outline:none;
+    border: 2px solid #0296ff;
   }
   
   button {
-    background: #0073e6;
+    /* background: #0296ff; */
+    background-image: linear-gradient(to right, #0485ff,rgb(255, 0, 149) );
     color: white;
     border: none;
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
-    width: 95%;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 5px black;
   }
   
-  button.clear {
-    background: #ff4d4d;
-  }
   
   button:hover {
-    opacity: 0.8;
+    transition: 0.4s;
+    scale: 105%;
+    animation-duration: 0.1s;
+    animation-timing-function: ease;
+    animation-name: searchbutton;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes searchbutton{
+    0%{background-image: linear-gradient(to right, #0485ff,rgb(255, 0, 149) );}
+    33%{background-image: linear-gradient(to bottom right, #0485ff,rgb(255, 0, 149) );}
+    67%{background-image: linear-gradient(to bottom left, #0485ff,rgb(255, 0, 149) );}
+    100% {background-image: linear-gradient(to left, #0485ff,rgb(255, 0, 149) );}
   }
   
   p {

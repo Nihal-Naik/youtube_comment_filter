@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       
       updatePopupCount(); // Update the popup display
+      console.log(keywordMatchedComments)
     });
   };
 
@@ -88,4 +89,5 @@ document.addEventListener("DOMContentLoaded", () => {
       filterAndHighlightComments(document.querySelectorAll("#content-text"));
     }
   });
+  
 });

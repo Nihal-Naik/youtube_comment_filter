@@ -29,14 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  clearCacheButton.addEventListener("click", () => {
-    chrome.storage.local.clear(() => {
-      matchCountElement.textContent = "0";
-      input.value = "";
-      alert("Cache cleared!");
-      refreshContentScript();
-    });
-  });
+  // clearCacheButton.addEventListener("click", () => {
+  //   chrome.storage.local.clear(() => {
+  //     matchCountElement.textContent = "0";
+  //     input.value = "";
+  //     alert("Cache cleared!");
+  //     refreshContentScript();
+  //   });
+  // });
 
   chrome.storage.onChanged.addListener((changes) => {
     if (changes.keywordMatchCount) {
